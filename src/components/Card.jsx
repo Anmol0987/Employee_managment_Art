@@ -11,8 +11,8 @@ const Card = () => {
             </div>
             <div className='w-full h-44  flex items-center justify-between border-b-2 '>
                 <div className='h-full w-1/4 flex items-center justify-center '>
-                    <div className='h-22 w-22 border-2 p-2 flex items-center justify-center rounded-md'>
-                        <div className='h-20 w-20 bg-black rounded-md'></div>
+                    <div className='h-20 w-20 border-2 p-2 flex items-center justify-center rounded-md'>
+                        <div className='h-16 w-16 bg-black rounded-md'></div>
                     </div>
                 </div>
                 <div className='h-full w-3/4 px-4 py-4'>

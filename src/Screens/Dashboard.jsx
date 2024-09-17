@@ -1,13 +1,19 @@
 import React from 'react'
 import  Card  from '../components/Card'
+import { useRecoilValue } from 'recoil'
+import { CollapsedAtom } from '../atom/Collapsed'
 
-const dashboardStyle = 'bg-slate-300 h-screen w-[95vw] float-end  px-10 pt-1 flex gap-10'
 
 export const Dashboard = () => {
+    const isCollapsed = useRecoilValue(CollapsedAtom);
+
     return (
 
-        <div className={dashboardStyle}>
+        <div className={`${isCollapsed?'bg-slate-300  w-[95vw] float-end p-16 flex flex-wrap gap-16':'bg-slate-300 flex-wrap  w-[80%] float-end  p-10  flex gap-14'}`}>
             <Card />
+            <Card />
+            <Card />
+
             <Card/>            
         </div>
 
