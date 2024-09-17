@@ -1,13 +1,8 @@
 import React from 'react'
-import NavBar  from '../components/NavBar'
-import  NavBar2  from '../components/NavBar2'
-import  SideBar  from '../components/SideBar'
 export const Home = () => {
     return (
         <>
-            <SideBar />
-            <NavBar />
-            <NavBar2 />
+        <h2 className='bg-slate-300 h-[100vh] w-[80%] float-end  px-10 pt-1'>Home</h2>
         </>
     )
 }
