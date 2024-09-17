@@ -1,13 +1,14 @@
 import React from 'react'
 import { RecoilRoot } from 'recoil'
-import { Home } from './Screens/Home'
+import {Home} from './Screens/Home'
+
 
 
 function App() {
   return (
     <>
       <RecoilRoot>
-         <Home />
+        <Home />
       </RecoilRoot>
     </>
   )
