@@ -2,11 +2,14 @@ import React from 'react'
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
-
+import { useRecoilValue } from 'recoil';
+import { CollapsedAtom } from '../atom/Collapsed';
 const NavBar = () => {
+    const isCollapsed = useRecoilValue(CollapsedAtom);
+
     return (
         <>
-            <div className='h-14 w-[95%] bg-slate-900 flex float-end justify-between items-center px-10'>
+            <div className= {`${isCollapsed  ? "h-14 w-[95%] bg-slate-900 flex float-end justify-between items-center px-10" : "h-14 w-[80%] bg-slate-900 flex float-end justify-between items-center px-10"}` }>
                 <div className='flex justify-center items-center gap-4 '>
                     <h2 className='text-slate-300'>My Space</h2>
                     <h2 className='text-slate-300'>Team</h2>

@@ -1,9 +1,12 @@
 import { Sidebar, MenuItem, Menu } from 'react-pro-sidebar';
 import { useState } from 'react';
 import { CiHome } from "react-icons/ci";
+import { useRecoilState } from 'recoil';
+import { CollapsedAtom } from '../atom/Collapsed';
+
 
 export default function SideBar() {
-    const [isCollapsed, setIsCollapsed] = useState(false);
+    const [isCollapsed,setIsCollapsed] = useRecoilState(CollapsedAtom);
 
     const handleToggleSidebar = () => {
         setIsCollapsed(!isCollapsed);
@@ -17,7 +20,7 @@ export default function SideBar() {
                 top: '0',
                 left: '0',
             }
-        } width="30%" collapsedWidth='7%' collapsed={isCollapsed} >
+        } width="20%" collapsedWidth='5%' collapsed={isCollapsed} >
             <button style={{ width: '100%', height: "3.5rem", backgroundColor: 'white', alignItems: "center" }} onClick={() => handleToggleSidebar()}>Open sidebar</button>
             <Menu rootStyles={{
                 color: 'white',
