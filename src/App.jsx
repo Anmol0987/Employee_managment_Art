@@ -1,18 +1,14 @@
 import React from 'react'
-import SideBar from './components/SideBar'
-import NavBar from './components/NavBar'
 import { RecoilRoot } from 'recoil'
-import NavBar2 from './components/NavBar2'
+import { Home } from './Screens/Home'
 
 
 function App() {
   return (
     <>
-    <RecoilRoot>
-      <SideBar/>
-      <NavBar/>
-      <NavBar2/>
-    </RecoilRoot>
+      <RecoilRoot>
+         <Home />
+      </RecoilRoot>
     </>
   )
 }
