@@ -32,7 +32,10 @@ const NavBar = () => {
                 </div>
                 
             </div>
-            <div className= {`${isprofile  ? "h-64 w-44 bg-white absolute right-10 top-16 border border-slate-950 rounded-md" : "h-64 w-44 bg-white absolute right-10 top-16 border hidden border-slate-950 rounded-md "}` }></div>
+            <div  className={`transition-transform duration-500 ease-in-out transform ${
+                    isprofile ? 'translate-x-10' : 'translate-x-[130%]'
+                    } fixed h-52 w-44 top-16 right-12 z-50 h-full w-64 bg-white shadow-lg`}
+            ></div>
         </>
     )
 }

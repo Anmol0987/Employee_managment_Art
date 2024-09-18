@@ -11,8 +11,8 @@ import Test from './Screens/Test'
 function App() {
   return (
     <>
-    <Test />
-      {/* <RecoilRoot>
+    
+      <RecoilRoot>
         <BrowserRouter>
         <FixedComponent />
           <Routes>
@@ -23,7 +23,7 @@ function App() {
 
           </Routes>
         </BrowserRouter>
-      </RecoilRoot> */}
+      </RecoilRoot>
     </>
   )
 }
