@@ -4,6 +4,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
 import { useRecoilValue } from 'recoil';
 import { CollapsedAtom } from '../atom/Collapsed';
+import { Link } from 'react-router-dom';
 const NavBar = () => {
     const isCollapsed = useRecoilValue(CollapsedAtom);
 
@@ -11,7 +12,7 @@ const NavBar = () => {
         <>
             <div className= {`${isCollapsed  ? "h-14 w-[95%] bg-slate-900 flex float-end justify-between items-center px-10" : "h-14 w-[80%] bg-slate-900 flex float-end justify-between items-center px-10"}` }>
                 <div className='flex justify-center items-center gap-4 '>
-                    <h2 className='text-slate-300'>My Space</h2>
+                    <Link to={"/home/myspace/overview"}  activeClassName="active" activeStyle={{ color: 'red' }}><a className='text-slate-300 active:underline '>My Space</a></Link>
                     <h2 className='text-slate-300'>Team</h2>
                     <h2 className='text-slate-300'>Organisation</h2>
                 </div>

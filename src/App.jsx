@@ -16,8 +16,8 @@ function App() {
         <FixedComponent />
           <Routes>
 
-            <Route path="/" element={<Home />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/home/myspace/overview" element={<Home />} />
+            <Route path="/home/myspace/dashboard" element={<Dashboard />} />
           </Routes>
         </BrowserRouter>
       </RecoilRoot>
