@@ -15,7 +15,7 @@ const NavBar2 = () => {
 
   return (
     <>
-    <div className={`${isCollapsed  ? "h-12 w-[95vw] float-end bg-slate-100 px-10 pt-1" : "h-12 w-[80%] float-end bg-slate-100 px-10 pt-1"}` }>
+    <div className={`${isCollapsed  ? "h-12 w-[95vw] float-end bg-slate-100 px-14 pt-1" : "h-12 w-[80%] float-end bg-slate-100 px-11 pt-1"}` }>
         <div className='flex justify-start items-center mt-2 gap-4'>
         <h2 className='text-slate-900'>Overview</h2>
         <div className='text-slate-900'><Link  to='/dashboard'>Dashboard</Link></div>

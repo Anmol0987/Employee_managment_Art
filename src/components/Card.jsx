@@ -5,8 +5,8 @@ import { MdOutlineLocalPhone } from "react-icons/md";
 
 const Card = () => {
   return (
-        <div className='Card h-96 w-[30%] bg-slate-100 rounded-md'>
-            <div className=' w-full h-14 border-b-2 flex items-center justify-start px-10 text-2xl '>
+        <div className='Card h-[50vh] w-[27vw] bg-slate-100 rounded-md'>
+            <div className=' w-full h-[10vh] border-b-2 flex items-center justify-start px-[2vw] text-2xl '>
                 <h1>Birthday</h1>
             </div>
             <div className='w-full h-44  flex items-center justify-between border-b-2 '>
