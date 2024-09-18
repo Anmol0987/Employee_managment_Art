@@ -19,7 +19,12 @@ const NavBar2 = () => {
         >
           DashBoard
         </NavLink></div>
-        <h2 className='text-slate-900'>Calender</h2>
+        <div className='text-slate-900'> <NavLink 
+            to="/home/myspace/Calender"
+            className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+        >
+          Calender
+        </NavLink></div>
         </div>
 
     </div>

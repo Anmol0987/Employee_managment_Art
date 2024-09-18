@@ -28,7 +28,7 @@ export default function SideBar() {
             }
         } width="20%" collapsedWidth='5%' collapsed={isCollapsed} >
             <div className='flex mb-10  h-20 w-full   justify-center items-center' >
-                <Link to='/home/myspace/overview'><GiHamburgerMenu className=' h-6 w-6 text-white' onClick={() => handleToggleSidebar()} /></Link>
+                <h2><GiHamburgerMenu className=' h-6 w-6 text-white' onClick={() => handleToggleSidebar()} /></h2>
             </div>
             <Menu rootStyles={
                 { color: 'blue' }
