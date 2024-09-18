@@ -15,10 +15,9 @@ const NavBar = () => {
 
     return (
         <>
-            <div className= {`${isCollapsed  ? "h-14 w-[95%] bg-slate-900 flex float-end justify-between items-center px-12" : "h-14 w-[80%] bg-slate-900 flex float-end justify-between items-center px-12"}` }>
-                <div className='flex justify-center items-center gap-8 '>
+            <div className= {`${isCollapsed  ? "h-14 w-[95%] bg-slate-900 flex float-end justify-between items-center px-16" : "h-14 w-[80%] bg-slate-900 flex float-end justify-between items-center px-14"}` }>
+                <div className='flex justify-center items-center gap-10 '>
                     <Link to={"/home/myspace/overview"}  activeClassName="active" activeStyle={{ color: 'red' }}><a className='text-slate-300 active:underline '>My Space</a></Link>
-                    <h2 className='text-slate-300'>Team</h2>
                     <h2 className='text-slate-300'>Organisation</h2>
                 </div>
                 <div className='flex justify-center items-center gap-4'>

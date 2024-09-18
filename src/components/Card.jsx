@@ -3,11 +3,11 @@ import { CiMobile1 } from "react-icons/ci";
 import { MdOutlineLocalPhone } from "react-icons/md";
 
 
-const Card = () => {
+const Card = ({title}) => {
   return (
         <div className='Card h-[50vh] w-[27vw] bg-slate-100 rounded-md'>
             <div className=' w-full h-[10vh] border-b-2 flex items-center justify-start px-[2vw] text-2xl '>
-                <h1>Birthday</h1>
+                <h1>{title}</h1>
             </div>
             <div className='w-full h-44  flex items-center justify-between border-b-2 '>
                 <div className='h-full w-1/4 flex items-center justify-center '>

@@ -5,12 +5,14 @@ import { Dashboard } from './Screens/Dashboard'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import FixedComponent from './components/FixedComponent'
 import Calender from './Screens/Calender'
+import Test from './Screens/Test'
 
 
 function App() {
   return (
     <>
-      <RecoilRoot>
+    <Test />
+      {/* <RecoilRoot>
         <BrowserRouter>
         <FixedComponent />
           <Routes>
@@ -21,7 +23,7 @@ function App() {
 
           </Routes>
         </BrowserRouter>
-      </RecoilRoot>
+      </RecoilRoot> */}
     </>
   )
 }
