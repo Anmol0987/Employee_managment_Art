@@ -9,3 +9,7 @@ export const profileAtom = atom({
     key:'profileAtom',
     default:false
 })
+export const notiAtom = atom({
+    key:'notiAtom',
+    default:false
+})
