@@ -38,13 +38,13 @@ const NavBar = () => {
                 </div>
 
             </div>
-            <div className={`transition-transform duration-500 rounded-lg ease-in-out transform ${isprofile ? 'translate-x-10' : 'translate-x-[130%]'} fixed h-52 w-44 top-16 right-12 z-50 h-full w-64 bg-slate-300  shadow-lg`}>
+            <div className={`transition-transform duration-500 rounded-lg ease-in-out transform ${isprofile ? 'translate-x-10' : 'translate-x-[130%]'} fixed h-64 w-56 top-16 right-12 z-50  bg-slate-300 shadow-lg`}>
                 <div className='flex justify-center items-center gap-4 border-b-2 border-slate-100 py-3'>
                     <h2 className='text-slate-900'>Profile</h2>
                 </div>
             </div>
 
-            <div className={`transition-transform duration-500 rounded-lg ease-in-out transform ${isnoti ? 'translate-x-10' : 'translate-x-[150%]'} fixed h-[75vh] w-[25vw] top-16 right-44 z-50 h-full w-64 bg-slate-300 shadow-lg`}>
+            <div className={`transition-transform duration-500 rounded-lg ease-in-out transform ${isnoti ? 'translate-x-10' : 'translate-x-[150%]'} fixed h-[75vh] w-[25vw] top-16 right-44 z-50  bg-slate-300 shadow-lg`}>
                 <div className='flex justify-center items-center gap-4 border-b-2 border-slate-100 py-3'>
                     <h2 className='text-slate-900' >Notification</h2>
                 </div>
@@ -57,4 +57,3 @@ export default NavBar
 
 
 
-// h-64 w-44 bg-white absolute right-10 top-16 border  border-slate-950

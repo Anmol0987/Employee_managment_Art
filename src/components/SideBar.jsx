@@ -30,8 +30,8 @@ export default function SideBar() {
                 transition: 'all 0.05s ease',
             }
         } width="20%" collapsedWidth='5%' collapsed={isCollapsed} >
-            <div className='flex mb-10  h-24 w-full   justify-center items-center' >
-                <h2>{isCollapsed ? <GiHamburgerMenu className=' h-6 w-6 text-white' onClick={() => handleToggleSidebar()} /> : <IoMdClose className=' h-8 w-8 text-white' onClick={() => handleToggleSidebar()} />}`          </h2>
+            <div className='flex mb-10  h-20 w-full   justify-center items-center' >
+                <h2>{isCollapsed? <GiHamburgerMenu className=' h-6 w-6 text-white' onClick={() => handleToggleSidebar()} /> :<IoMdClose className=' h-6 w-6 text-white' onClick={() => handleToggleSidebar()} />} </h2>
             </div>
             <Menu rootStyles={
                 { color: 'blue' }
