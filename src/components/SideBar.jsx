@@ -25,6 +25,7 @@ export default function SideBar() {
                 position: 'fixed',
                 top: '0',
                 left: '0',
+                cursor: 'pointer',
             }
         } width="20%" collapsedWidth='5%' collapsed={isCollapsed} >
             <div className='flex mb-10  h-20 w-full   justify-center items-center' >
