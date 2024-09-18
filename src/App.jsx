@@ -7,7 +7,6 @@ import FixedComponent from './components/FixedComponent'
 
 
 
-
 function App() {
   return (
     <>
