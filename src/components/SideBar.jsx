@@ -3,10 +3,11 @@ import { useState } from 'react';
 import { CiHome } from "react-icons/ci";
 import { useRecoilState } from 'recoil';
 import { CollapsedAtom } from '../atom/Collapsed';
+import { GiHamburgerMenu } from "react-icons/gi";
 
 
 export default function SideBar() {
-    const [isCollapsed,setIsCollapsed] = useRecoilState(CollapsedAtom);
+    const [isCollapsed, setIsCollapsed] = useRecoilState(CollapsedAtom);
 
     const handleToggleSidebar = () => {
         setIsCollapsed(!isCollapsed);
@@ -21,7 +22,11 @@ export default function SideBar() {
                 left: '0',
             }
         } width="20%" collapsedWidth='5%' collapsed={isCollapsed} >
-            <button style={{ width: '100%', height: "3.5rem", backgroundColor: 'white', alignItems: "center" }} onClick={() => handleToggleSidebar()}>Open sidebar</button>
+            <div className='flex  h-8 w-full   justify-center items-center' >
+                <GiHamburgerMenu className=' h-6 w-6 text-white' onClick={() => handleToggleSidebar()} />
+            </div>
+
+            {/* <button style={{ width: '100%', height: "3.5rem", backgroundColor: 'white', alignItems: "center" }} onClick={() => handleToggleSidebar()}>Open sidebar</button> */}
             <Menu rootStyles={{
                 color: 'white',
             }} >
