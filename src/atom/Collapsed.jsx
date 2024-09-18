@@ -4,3 +4,8 @@ export const CollapsedAtom =atom({
     key:'collapsedAtom',
     default:false
 })
+
+export const profileAtom = atom({
+    key:'profileAtom',
+    default:false
+})
