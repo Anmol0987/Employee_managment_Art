@@ -47,7 +47,7 @@ const TimeTracker = () => {
                     </button>
 
                 </div>
-                <DataCard/>
+                <DataCard />
 
             </div>
         </>

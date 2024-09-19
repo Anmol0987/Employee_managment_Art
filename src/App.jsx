@@ -15,6 +15,7 @@ function App() {
       <RecoilRoot>
         <BrowserRouter>
           <Routes>
+          <Route path="/" element={<Home />} />
             <Route path="/home/myspace/overview" element={<Home />} />
             <Route path="/home/myspace/dashboard" element={<Dashboard />} />
             <Route path="/home/myspace/calender" element={<Calender />} />
