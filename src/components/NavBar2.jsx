@@ -10,7 +10,7 @@ const NavBar2 = ({titles}) => {
 
   return (
     <>
-      <div className={`${isCollapsed ? "h-12 w-[95vw] float-end bg-slate-100 px-14 pt-1 " : " h-12 w-[80%] float-end bg-slate-100 px-11 pt-1"}`}>
+      <div className={`${isCollapsed ? "h-12 w-[95vw] float-end bg-slate-100 px-16 pt-1 " : " h-12 w-[80%] float-end bg-slate-100 px-11 pt-1"}`}>
         <div className='flex justify-start items-center mt-2 gap-4'>
           {titles.map((title, index) => (
             <div key={index} className='text-slate-900'> <NavLink to={`/home/myspace/${title}`} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>{title}</NavLink></div>

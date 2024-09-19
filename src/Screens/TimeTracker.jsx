@@ -20,7 +20,7 @@ const TimeTracker = () => {
         <>
             <SideBar />
             <NavBar titles={["My Data", "Team"]} />
-            <NavBar2 titles={["overview", "dashboard", "calender"]} />
+            <NavBar2 titles={["Overview", "Dashboard", "Calender"]} />
             <div className={`${isCollapsed ? 'bg-slate-300  w-[95vw] float-end p-16 flex flex-wrap gap-10' : 'bg-slate-300 flex-wrap  w-[80%] float-end  px-28  py-14  flex gap-28'}`}>
                 <div className='h-16 w-[95vw] rounded-lg bg-white flex items-center justify-start gap-16 px-14'>
                     <label>
