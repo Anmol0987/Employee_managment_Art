@@ -4,8 +4,8 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { CollapsedAtom, notiAtom, profileAtom } from '../atom/Collapsed';
-import { Link } from 'react-router-dom';
-const NavBar = () => {
+import { Link } from 'react-router-dom';    
+const NavBar = ({ titles }) => {
     const isCollapsed = useRecoilValue(CollapsedAtom);
     const [isprofile, setIsprofile] = useRecoilState(profileAtom)
     const [isnoti, setIsnoti] = useRecoilState(notiAtom)
@@ -23,8 +23,11 @@ const NavBar = () => {
         <>
             <div className={`${isCollapsed ? "h-14 w-[95%] bg-slate-900 flex float-end justify-between items-center px-16" : "h-14 w-[80%] bg-slate-900 flex float-end justify-between items-center px-14"}`}>
                 <div className='flex justify-center items-center gap-10 '>
-                    <Link to={"/home/myspace/overview"} activeClassName="active" activeStyle={{ color: 'red' }}><a className='text-slate-300 active:underline '>My Space</a></Link>
-                    <h2 className='text-slate-300'>Organisation</h2>
+                    {titles.map((title, index) => (
+                        <Link key={index} to={`/home/${title}/overview`} activeClassName="active" activeStyle={{ color: 'red' }}><a className='text-slate-300 active:underline '>{title}</a></Link>
+                    ))}
+
+                    {/* <h2 className='text-slate-300'>Organisation</h2> */}
                 </div>
                 <div className='flex justify-center items-center gap-4'>
                     <h3 className='text-slate-300 text-2xl'><AiOutlineSearch /></h3>
