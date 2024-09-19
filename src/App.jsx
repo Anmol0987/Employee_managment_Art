@@ -19,7 +19,6 @@ function App() {
             <Route path="/home/myspace/dashboard" element={<Dashboard />} />
             <Route path="/home/myspace/calender" element={<Calender />} />
             <Route path="/timetracker/mydata/timelogs" element={<TimeTracker/>} />
-            <Route path="/timetracker/mydata" element={<TimeTracker/>} />
 
           </Routes>
         </BrowserRouter>
