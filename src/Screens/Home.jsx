@@ -1,10 +1,9 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil'
 import { CollapsedAtom } from '../atom/Collapsed'
-import NavBar2 from '../components/NavBar2'
 import SideBar from '../components/SideBar'
-import NavBar from '../components/NavBar'
-
+import HomeNavBar from '../NavigationBar/HomeNavBar'
+import HomeNavBar2 from '../NavigationBar/HomeNavBar2'
 
 export const Home = () => {
     const isCollapsed = useRecoilValue(CollapsedAtom);
@@ -12,8 +11,8 @@ export const Home = () => {
     return (
         <>
             <SideBar />
-            <NavBar titles={["myspace", "organization","team"]} />
-            <NavBar2 titles={["overview","dashboard","calender"]} />
+            <HomeNavBar />
+            <HomeNavBar2 titles={["Overview", "Dashboard", "Calender"]} name={"myspace"} main={"home"} />
             <div className={`${isCollapsed ? ' relative bg-slate-300 min-h-max  w-[95%] float-end   ' : ' bg-slate-300 relative h-[100vh] w-[80%] float-end '}`}>
                 <div className='h-40 w-full relative bg-black' >
                     <img className='h-full w-full relative bg-contain bg-center' src="https://images.unsplash.com/photo-1718062455499-c362df48a68d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />

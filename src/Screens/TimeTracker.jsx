@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useRecoilValue } from 'recoil'
 import { CollapsedAtom } from '../atom/Collapsed'
-import NavBar2 from '../components/NavBar2'
 import SideBar from '../components/SideBar'
-import NavBar from '../components/NavBar'
 import DataCard from '../components/DataCard'
+import HomeNavBar2 from '../NavigationBar/HomeNavBar2'
+import TimeTrackerNavBar from '../NavigationBar/TimeTrackerNavBar'
 
 
 const TimeTracker = () => {
@@ -19,8 +19,8 @@ const TimeTracker = () => {
     return (
         <>
             <SideBar />
-            <NavBar titles={["My Data", "Team"]} />
-            <NavBar2 titles={["Overview", "Dashboard", "Calender"]} />
+            <TimeTrackerNavBar  />
+            <HomeNavBar2 titles={["Timelogs"]} name={"mydata"} main={"timetracker"} />
             <div className={`${isCollapsed ? 'bg-slate-300  w-[95vw] float-end p-16 flex flex-wrap gap-10' : 'bg-slate-300 flex-wrap  w-[80%] float-end  px-28  py-14  flex gap-28'}`}>
                 <div className='h-16 w-[95vw] rounded-lg bg-white flex items-center justify-start gap-16 px-14'>
                     <label>

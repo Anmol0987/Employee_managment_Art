@@ -4,8 +4,8 @@ import { CollapsedAtom } from '../atom/Collapsed'
 import Calendar from 'react-calendar'
 import '../styles/Calender.css';
 import SideBar from '../components/SideBar'
-import NavBar from '../components/NavBar'
-import NavBar2 from '../components/NavBar2'
+import HomeNavBar from '../NavigationBar/HomeNavBar';
+import HomeNavBar2 from '../NavigationBar/HomeNavBar2';
 
 
 
@@ -17,8 +17,8 @@ const Calender = () => {
   return (
     <>
       <SideBar />
-      <NavBar titles={["Myspace", "Organization", "Team"]} />
-      <NavBar2 titles={["Overview", "Dashboard", "Calender"]} />
+      <HomeNavBar />
+      <HomeNavBar2 titles={["Overview", "Dashboard", "Calender"]} name={"myspace"} main={"home"} />
       <div className={`${isCollapsed ? 'bg-slate-300 h-[95vh] w-[95vw] float-end p-16 ' : 'bg-slate-300  h-[95vh] w-[80%] float-end  px-28  py-14  gap-28'}`}>
         <Calendar onChange={onChange} value={value} />
       </div>
