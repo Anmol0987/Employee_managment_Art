@@ -42,9 +42,9 @@ const TimeTracker = () => {
                     <label>
                         <input className='border  text-[15px] border-slate-300 rounded-md  pl-2 pr-5 py-2' name='Work' placeholder='what are you working on?' />
                     </label>
-                    <div className={`${isCollapsed ? 'bg-green-400 text-[15px] px-6 py-2 rounded-md ml-auto' : 'bg-green-400 text-[15px] px-6 py-2 rounded-md ml-32'}`}>
-                        <button>00:00:00</button>
-                    </div>
+                    <button className={`${isCollapsed ? 'bg-green-400 text-[15px] px-6 py-2 rounded-md ml-auto' : 'bg-green-400 text-[15px] px-6 py-2 rounded-md ml-32'}`}>
+                        00:00:00
+                    </button>
 
                 </div>
                 <DataCard/>
