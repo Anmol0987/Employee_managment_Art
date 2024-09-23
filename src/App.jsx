@@ -10,7 +10,7 @@ import Organization from "./Screens/Organization";
 import Attendence from "./Screens/Attendence";
 import Announcement from "./Screens/Announcement";
 import NotFound from "./Screens/NotFound";
-import LeaveTracker from "./Screens/LeaveTracker";
+// import LeaveTracker from "./Screens/LeaveTracker";
 import LeaveSummary from "./Screens/LeaveSummary";
 import LeaveBalance from "./Screens/LeaveBalance";
 import LeaveRequest from "./Screens/LeaveRequest";
@@ -21,7 +21,7 @@ function App() {
     <>
       <RecoilRoot>
         <BrowserRouter>
-          <Routes>
+        <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home/myspace/Overview" element={<Home />} />
             <Route path="/home/myspace/Dashboard" element={<Dashboard />} />
@@ -38,9 +38,8 @@ function App() {
               path="/timetracker/mydata/timelogs"
               element={<TimeTracker />}
             />
-            <Route path="/attendence" element={<Attendence />} />
+            <Route path="/attendence/mydata/attendenceSummary" element={<Attendence />} />
             <Route path="/trackLeave/holiday" element={<Holiday />} />
-            {/* <Route path="/trackLeave" element={<LeaveTracker />} /> */}
             <Route
               path="/trackLeave/mydata/leavesummary"
               element={<LeaveSummary />}

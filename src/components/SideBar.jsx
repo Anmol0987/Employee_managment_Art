@@ -114,7 +114,7 @@ export default function SideBar() {
         >
           {" "}
           <NavLink
-            to="/attendence"
+            to="/attendence/mydata/attendenceSummary"
             className={({ isActive }) =>
               isActive ? "sidebar-link active" : "sidebar-link"
             }
