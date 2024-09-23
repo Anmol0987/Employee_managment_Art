@@ -23,7 +23,7 @@ const AttendenceNavBar = () => {
         <>
             <div className={`${isCollapsed ? "h-14 w-[95%] bg-slate-900 flex float-end justify-between items-center px-16" : "h-14 w-[80%] bg-slate-900 flex float-end justify-between items-center px-14"}`}>
                 <div className='flex justify-center items-center gap-10 '>
-                    <Link to={`/attendence/mydata/attendenceSummary`} activeClassName="active" activeStyle={{ color: 'red' }}><a className='text-slate-300 active:underline '>My Space</a></Link>
+                    <Link to={`/attendence/mydata/attendence Summary`} activeClassName="active" activeStyle={{ color: 'red' }}><a className='text-slate-300 active:underline '>My Space</a></Link>
                     
 
                 </div>

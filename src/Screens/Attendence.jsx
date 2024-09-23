@@ -20,7 +20,7 @@ const Attendence = ({titles,main}) => {
       <SideBar />
       <AttendenceNavBar />
       {/* <HomeNavBar titles={["Myspace"]} /> */}
-      <HomeNavBar2 titles={["AttendenceSummary"]} name={"mydata"} main={"attendence"} />
+      <HomeNavBar2 titles={["Attendence Summary"]} name={"mydata"} main={"attendence"} />
       <div className={`${isCollapsed ? 'bg-slate-300 h-[90vh] w-[95vw] float-end p-16 ' : 'bg-slate-300  h-[90vh] w-[80%] float-end  px-28  py-14  gap-28'}`}>
         <Calendar onChange={setValue} value={value} />
       </div>

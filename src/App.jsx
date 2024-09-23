@@ -38,18 +38,18 @@ function App() {
               path="/timetracker/mydata/timelogs"
               element={<TimeTracker />}
             />
-            <Route path="/attendence/mydata/attendenceSummary" element={<Attendence />} />
+            <Route path="/attendence/mydata/attendence Summary" element={<Attendence />} />
             <Route path="/trackLeave/holiday" element={<Holiday />} />
             <Route
-              path="/trackLeave/mydata/leavesummary"
+              path="/trackLeave/mydata/leave summary"
               element={<LeaveSummary />}
             />
             <Route
-              path="/trackLeave/mydata/leavebalance"
+              path="/trackLeave/mydata/leave balance"
               element={<LeaveBalance />}
             />
             <Route
-              path="/trackLeave/mydata/leaveRequest"
+              path="/trackLeave/mydata/leave Request"
               element={<LeaveRequest />}
             />
 

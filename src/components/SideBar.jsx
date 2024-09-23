@@ -107,7 +107,7 @@ export default function SideBar() {
           } items-center`}
         >
           <NavLink
-            to="/attendence/mydata/attendenceSummary"
+            to="/attendence/mydata/attendence Summary"
             className={({ isActive }) =>
               isActive ? "sidebar-link active" : "sidebar-link"
             }
@@ -128,7 +128,7 @@ export default function SideBar() {
           } items-center`}
         >
           <NavLink
-            to="/trackLeave/mydata/leavesummary"
+            to="/trackLeave/mydata/leave summary"
             className={({ isActive }) =>
               isActive ? "sidebar-link active" : "sidebar-link"
             }

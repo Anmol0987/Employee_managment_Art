@@ -28,7 +28,7 @@ const LeaveTrackerNavBar = () => {
       >
         <div className="flex justify-center items-center gap-10 ">
           <Link
-            to={`/trackLeave/mydata/LeaveSummary`}
+            to={`/trackLeave/mydata/Leave Summary`}
             activeClassName="active"
             activeStyle={{ color: "red" }}
           >

@@ -12,7 +12,7 @@ const LeaveRequest = () => {
       <SideBar />
       <LeaveTrackerNavBar />
       <HomeNavBar2
-        titles={["LeaveSummary", "LeaveBalance", "LeaveRequest"]}
+        titles={["Leave Summary", "Leave Balance", "Leave Request"]}
         name={"mydata"}
         main={"trackLeave"}
       />
