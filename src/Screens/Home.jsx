@@ -18,7 +18,7 @@ export const Home = () => {
                     <img className='h-full w-full relative bg-contain bg-center' src="https://images.unsplash.com/photo-1718062455499-c362df48a68d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
                 </div>
 
-                <div className=' relative h-[64.1vh] w-96 '>
+                <div className=' relative h-fit w-fit '>
                     <div class=" absolute -top-8 left-14 w-72 bg-white border border-gray-200 rounded-lg shadow ">
                         <div class="flex mb-9 flex-col items-center">
                             <img class="w-24 h-24 mt-1  mb-3 rounded-xl bg-black" src="https://penguinui.s3.amazonaws.com/component-assets/avatar-8.webp" alt="Bonnie image" />

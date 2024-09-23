@@ -14,7 +14,7 @@ const Overview = () => {
             <HomeNavBar />
             <HomeNavBar2 titles={["Overview", "Announcement"]} name={"Organization"} main={"home"} />
             <div className={`${isCollapsed ? 'bg-slate-300 h-[95vh] w-[95vw] float-end p-16 ' : 'bg-slate-300  h-[95vh] w-[80%] float-end  px-28  py-14  gap-28'}`}>
-                <h2>Overview.....</h2>
+                <h2>Overview..... </h2>
             </div>
         </>
     )
