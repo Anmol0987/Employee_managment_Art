@@ -1,16 +1,20 @@
 import React from "react";
-import { useRecoilValue } from "recoil";
-import { CollapsedAtom } from "../atom/Collapsed";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { CollapsedAtom, leaveAtom } from "../atom/Collapsed";
 import SideBar from "../components/SideBar";
 import HomeNavBar2 from "../NavigationBar/HomeNavBar2";
 import LeaveTrackerNavBar from "../NavigationBar/LeaveTrackerNavBar";
+import ApplyLeave from "./ApplyLeave";
 
 const LeaveRequest = () => {
   const isCollapsed = useRecoilValue(CollapsedAtom);
-  return (
-    <>
-      <SideBar />
-      <LeaveTrackerNavBar />
+  const [isLeave,setIsleave]=useRecoilState(leaveAtom)
+
+  const LeaveRequestPage = () => {
+    return (
+        <>
+        <SideBar />
+             <LeaveTrackerNavBar />
       <HomeNavBar2
         titles={["Leave Summary", "Leave Balance", "Leave Request"]}
         name={"mydata"}
@@ -30,9 +34,17 @@ const LeaveRequest = () => {
             alt=""
           />
           <p>No Data Found</p>
-          <button className=" bg-[#0088FF] py-2 border rounded-md text-white px-5 mt-2 ">Add Request</button>
+          <button className=" bg-[#0088FF] py-2 border rounded-md text-white px-5 mt-2 " onClick={()=>setIsleave(true)}>Add Request</button>
         </div>
       </div>
+        </>
+    )
+}
+  return (
+    <>
+        {isLeave ? <ApplyLeave /> :<LeaveRequestPage />}
+
+     
     </>
   );
 };

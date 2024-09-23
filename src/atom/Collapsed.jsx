@@ -13,3 +13,7 @@ export const notiAtom = atom({
     key:'notiAtom',
     default:false
 })
+export const leaveAtom = atom({
+    key:'leaveAtom',
+    default:false
+})
