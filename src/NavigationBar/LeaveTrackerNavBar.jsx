@@ -5,7 +5,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { CollapsedAtom, notiAtom, profileAtom } from "../atom/Collapsed";
 import { Link } from "react-router-dom";
-const HomeNavBar = () => {
+const LeaveTrackerNavBar = () => {
   const isCollapsed = useRecoilValue(CollapsedAtom);
   const [isprofile, setIsprofile] = useRecoilState(profileAtom);
   const [isnoti, setIsnoti] = useRecoilState(notiAtom);
@@ -28,18 +28,18 @@ const HomeNavBar = () => {
       >
         <div className="flex justify-center items-center gap-10 ">
           <Link
-            to={`/home/myspace/overview`}
+            to={`/trackLeave/mydata/LeaveSummary`}
             activeClassName="active"
             activeStyle={{ color: "red" }}
           >
-            <a className="text-slate-300 active:underline ">My Space</a>
+            <a className="text-slate-300 active:underline ">My Data</a>
           </Link>
           <Link
-            to={`/home/Organization/overview`}
+            to={`/trackLeave/holiday`}
             activeClassName="active"
             activeStyle={{ color: "red" }}
           >
-            <a className="text-slate-300 active:underline ">Organization</a>
+            <a className="text-slate-300 active:underline ">Holiday</a>
           </Link>
         </div>
         <div className="flex justify-center items-center gap-4">
@@ -83,4 +83,4 @@ const HomeNavBar = () => {
   );
 };
 
-export default HomeNavBar;
+export default LeaveTrackerNavBar;
