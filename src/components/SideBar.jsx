@@ -48,7 +48,7 @@ export default function SideBar() {
               className=" h-6 w-6 text-white"
               onClick={() => handleToggleSidebar()}
             />
-          )}{" "}
+          )}
         </h2>
       </div>
       <Menu
@@ -64,19 +64,16 @@ export default function SideBar() {
             isCollapsed ? "justify-center" : "justify-start"
           } items-center `}
         >
-          {" "}
           <NavLink
             to="/home/myspace/overview"
             className={({ isActive }) =>
               isActive ? "sidebar-link active " : "sidebar-link"
             }
           >
-            {" "}
             {isCollapsed ? (
               <CiHome className="text-2xl" />
             ) : (
               <div className="  flex gap-2 justify-center items-center ">
-                {" "}
                 <CiHome className="text-2xl" />
                 <h1 className="text-2xl">Home</h1>
               </div>
@@ -88,19 +85,16 @@ export default function SideBar() {
             isCollapsed ? "justify-center" : "justify-start"
           } items-center`}
         >
-          {" "}
           <NavLink
             to="/timetracker/mydata/timelogs"
             className={({ isActive }) =>
               isActive ? "sidebar-link active" : "sidebar-link"
             }
           >
-            {" "}
             {isCollapsed ? (
               <CiTimer className="text-2xl" />
             ) : (
               <div className="flex gap-2 justify-center items-center">
-                {" "}
                 <CiTimer className="text-2xl" />
                 <h1 className="text-2xl">Time Tracker</h1>
               </div>
@@ -112,19 +106,16 @@ export default function SideBar() {
             isCollapsed ? "justify-center" : "justify-start"
           } items-center`}
         >
-          {" "}
           <NavLink
             to="/attendence/mydata/attendenceSummary"
             className={({ isActive }) =>
               isActive ? "sidebar-link active" : "sidebar-link"
             }
           >
-            {" "}
             {isCollapsed ? (
               <CiCalendarDate className="text-2xl" />
             ) : (
               <div className="flex gap-2 justify-center items-center">
-                {" "}
                 <CiCalendarDate className="text-2xl" />
                 <h1 className="text-2xl">Attendence</h1>
               </div>
@@ -136,19 +127,16 @@ export default function SideBar() {
             isCollapsed ? "justify-center" : "justify-start"
           } items-center`}
         >
-          {" "}
           <NavLink
             to="/trackLeave/mydata/leavesummary"
             className={({ isActive }) =>
               isActive ? "sidebar-link active" : "sidebar-link"
             }
           >
-            {" "}
             {isCollapsed ? (
               <MdOutlineTimeToLeave className="text-2xl" />
             ) : (
               <div className="flex gap-2 justify-center items-center">
-                {" "}
                 <MdOutlineTimeToLeave className="text-2xl" />
                 <h1 className="text-2xl">Leave Tracker</h1>
               </div>
