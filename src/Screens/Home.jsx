@@ -1,16 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRecoilValue } from 'recoil'
 import { CollapsedAtom } from '../atom/Collapsed'
 import SideBar from '../components/SideBar'
 import HomeNavBar from '../NavigationBar/HomeNavBar'
 import HomeNavBar2 from '../NavigationBar/HomeNavBar2'
+import { ScaleLoader } from 'react-spinners';
+import '../styles/loader.css'
 
 export const Home = () => {
     const isCollapsed = useRecoilValue(CollapsedAtom);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Simulate a delay (e.g., fetching data) before the page is fully loaded
+        setTimeout(() => {
+        setLoading(false);
+        }, 600); // Adjust time as needed
+    }, []);
 
     return (
         <>
-            <SideBar />
+            {loading ? (
+        <div className="loader-container">
+          <ScaleLoader color="#3498db" loading={loading} height={50} width={6} radius={2} margin={2} />
+        </div>
+      ) : (
+        <>
+                 <SideBar />
             <HomeNavBar />
             <HomeNavBar2 titles={["Overview", "Dashboard", "Calender"]} name={"myspace"} main={"home"} />
             <div className={`${isCollapsed ? ' relative bg-slate-300 min-h-max  w-[95%] float-end   ' : ' bg-slate-300 relative h-[100vh] w-[80%] float-end '}`}>
@@ -33,7 +49,11 @@ export const Home = () => {
                 </div>
 
             </div>
+
         </>
+      )}
+    
+    </>
     )
 }
 
