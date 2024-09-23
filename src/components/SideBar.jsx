@@ -4,10 +4,13 @@ import { useRecoilState } from 'recoil';
 import { CollapsedAtom } from '../atom/Collapsed';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineTimeToLeave } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { CiTimer } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import { CiCalendarDate } from "react-icons/ci";
+import '../styles/link.css'
+
+
 
 const menuButtonStyle = {
     backgroundColor: "#151632"
@@ -42,10 +45,10 @@ export default function SideBar() {
                 },
 
             }} >
-                <a className={`flex p-10  h-8 w-full text-white  hover:text-blue-400  ${isCollapsed ? "justify-center" : "justify-start"} items-center `}> <Link to='/home/myspace/overview'> {isCollapsed ? <CiHome className='text-2xl' /> : <div className='  flex gap-2 justify-center items-center '>  <CiHome className='text-2xl' /><  h1 className='text-2xl' >Home</h1></div>}</Link></a>
-                <a className={`flex p-10  h-8 w-full text-white  hover:text-blue-400  ${isCollapsed ? "justify-center" : "justify-start"} items-center`} > <Link to='/timetracker/mydata/timelogs'> {isCollapsed ? <CiTimer className='text-2xl' /> : <div className='flex gap-2 justify-center items-center'>  <CiTimer className='text-2xl' /><  h1 className='text-2xl' >Time Tracker</h1></div>}</Link></a>
-                <a className={`flex p-10  h-8 w-full text-white  hover:text-blue-400  ${isCollapsed ? "justify-center" : "justify-start"} items-center`} > <Link to='/attendence'> {isCollapsed ? <CiCalendarDate className='text-2xl' /> : <div className='flex gap-2 justify-center items-center'>  <CiCalendarDate className='text-2xl' /><  h1 className='text-2xl' >Attendence</h1></div>}</Link></a>
-                <a className={`flex p-10  h-8 w-full text-white  hover:text-blue-400  ${isCollapsed ? "justify-center" : "justify-start"} items-center`} > <Link to='/trackLeave'> {isCollapsed ? <MdOutlineTimeToLeave className='text-2xl' /> : <div className='flex gap-2 justify-center items-center'>  <MdOutlineTimeToLeave className='text-2xl' /><  h1 className='text-2xl' >Leave Tracker</h1></div>}</Link></a>
+                <a className={`flex p-10  h-8 w-full text-white  hover:text-blue-400  ${isCollapsed ? "justify-center" : "justify-start"} items-center `}> <NavLink to='/home/myspace/overview'  className={({ isActive }) => isActive ? "sidebar-link active "  : "sidebar-link" }> {isCollapsed ? <CiHome className='text-2xl' /> :<div className='  flex gap-2 justify-center items-center '>  <CiHome className='text-2xl' /><  h1 className='text-2xl' >Home</h1></div> }</NavLink></a>
+                <a className={`flex p-10  h-8 w-full text-white  hover:text-blue-400  ${isCollapsed ? "justify-center" : "justify-start"} items-center`} > <NavLink to='/timetracker/mydata/timelogs' className={({ isActive }) => isActive ? "sidebar-link active" : "sidebar-link"}> {isCollapsed ? <CiTimer className='text-2xl' /> : <div className='flex gap-2 justify-center items-center'>  <CiTimer className='text-2xl' /><  h1 className='text-2xl' >Time Tracker</h1></div>}</NavLink></a>
+                <a className={`flex p-10  h-8 w-full text-white  hover:text-blue-400  ${isCollapsed ? "justify-center" : "justify-start"} items-center`} > <NavLink to='/attendence' className={({ isActive }) => isActive ? "sidebar-link active" : "sidebar-link"}> {isCollapsed ? <CiCalendarDate className='text-2xl' /> : <div className='flex gap-2 justify-center items-center'>  <CiCalendarDate className='text-2xl' /><  h1 className='text-2xl' >Attendence</h1></div>}</NavLink></a>
+                <a className={`flex p-10  h-8 w-full text-white  hover:text-blue-400  ${isCollapsed ? "justify-center" : "justify-start"} items-center`} > <NavLink to='/trackLeave' className={({ isActive }) => isActive ? "sidebar-link active" : "sidebar-link"}> {isCollapsed ? <MdOutlineTimeToLeave className='text-2xl' /> : <div className='flex gap-2 justify-center items-center'>  <MdOutlineTimeToLeave className='text-2xl' /><  h1 className='text-2xl' >Leave Tracker</h1></div>}</NavLink></a>
             </Menu>
 
         </Sidebar >

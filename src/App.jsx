@@ -13,6 +13,7 @@ import Announcement from './Screens/Announcement'
 import NotFound from './Screens/NotFound'
 
 
+
 function App() {
   return (
     <>
@@ -22,7 +23,7 @@ function App() {
           <Routes>
           <Route path="/" element={<Home />} />
             <Route path="/home/myspace/Overview" element={<Home />} />
-            <Route path="/home/myspace/Dashboard" element={<Dashboard />} />
+            <Route path="/home/myspace/Dashboard" element={<Dashboard  />} />
             <Route path="/home/myspace/Calender" element={<Calender />} />
             <Route path='/home/Organization/Overview' element={<Organization/>} />
             <Route path='/home/Organization/announcement' element={<Announcement/>} />
