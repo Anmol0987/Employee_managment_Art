@@ -17,3 +17,7 @@ export const leaveAtom = atom({
     key:'leaveAtom',
     default:false
 })
+export const holidayAtom = atom({
+    key:'holidayAtom',
+    default:false
+})

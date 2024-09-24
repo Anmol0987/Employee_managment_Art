@@ -3,6 +3,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { leaveAtom } from "../atom/Collapsed";
 import { useState } from "react";
 
+
 const ApplyLeave = () => {
   const [isLeave,setIsleave] = useRecoilState(leaveAtom);
   const [selectedOption, setSelectedOption] = useState("");
