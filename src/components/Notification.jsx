@@ -10,7 +10,7 @@ const Notification = () => {
 
 
     return (
-        <div className={`transition-transform overflow-y-auto  duration-500 rounded-lg ease-in-out transform ${isnoti ? "translate-x-10" : "translate-x-[200%]"} fixed h-[75vh] w-[25vw] top-16 right-44 z-50  bg-slate-300 shadow-lg`}>
+        <div className={`transition-transform overflow-y-scroll no-scrollbar  duration-500 rounded-lg ease-in-out transform ${isnoti ? "translate-x-10" : "translate-x-[200%]"} fixed h-[75vh] w-[25vw] top-16 right-44 z-50  bg-slate-300 shadow-lg`}>
             <div className="flex justify-between items-center gap-4 border-b-2 border-slate-100 p-3">
                 <h2 className="text-slate-900 font-semibold">Notification</h2>
                 <IoClose onClick={() => setIsnoti(!isnoti)} className="text-slate-900 cursor-pointer     text-2xl" />
