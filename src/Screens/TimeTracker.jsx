@@ -10,10 +10,14 @@ import TimeTrackerNavBar from '../NavigationBar/TimeTrackerNavBar'
 const TimeTracker = () => {
     const isCollapsed = useRecoilValue(CollapsedAtom);
 
-    const [selectedOption, setSelectedOption] = useState(""); // Initial state is empty
+    const [selectedOption1, setSelectedOption1] = useState(""); // Initial state is empty
+    const [selectedOption2, setSelectedOption2] = useState("");
 
-    const handleChange = (e) => {
-        setSelectedOption(e.target.value); // Update state when dropdown value changes
+    const handleChange1 = (e) => {
+        setSelectedOption1(e.target.value); // Update state when dropdown value changes
+    };
+    const handleChange2 = (e) => {
+        setSelectedOption2(e.target.value); // Update state when dropdown value changes
     };
 
     return (
@@ -24,7 +28,7 @@ const TimeTracker = () => {
             <div className={`${isCollapsed ? 'bg-slate-300  w-[95vw] float-end p-16 flex flex-wrap gap-10' : 'bg-slate-300 flex-wrap  w-[80%] float-end  px-28  py-14  flex gap-28'}`}>
                 <div className='h-16 w-[95vw] rounded-lg bg-white flex items-center justify-start gap-16 px-14'>
                     <label>
-                        <select className='border text-[15px] border-slate-300 rounded-md px-3 py-2' id="dropdown" value={selectedOption} onChange={handleChange}>
+                        <select className='border text-[15px] border-slate-300 rounded-md px-3 py-2' id="dropdown" value={selectedOption1} onChange={handleChange1}>
                             <option value="">Select Project</option>
                             <option value="option1">Option 1</option>
                             <option value="option2">Option 2</option>
@@ -32,7 +36,7 @@ const TimeTracker = () => {
                         </select>
                     </label>
                     <label>
-                        <select className='border  text-[15px] border-slate-300 rounded-md px-3 py-2' id="dropdown" value={selectedOption} onChange={handleChange}>
+                        <select className='border  text-[15px] border-slate-300 rounded-md px-3 py-2' id="dropdown" value={selectedOption2} onChange={handleChange2}>
                             <option value="">Select Job</option>
                             <option value="option1">Option 1</option>
                             <option value="option2">Option 2</option>
