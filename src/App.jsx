@@ -10,11 +10,13 @@ import Organization from "./Screens/Organization";
 import Attendence from "./Screens/Attendence";
 import Announcement from "./Screens/Announcement";
 import NotFound from "./Screens/NotFound";
+import Login from "./Screens/Login";
 // import LeaveTracker from "./Screens/LeaveTracker";
 import LeaveSummary from "./Screens/LeaveSummary";
 import LeaveBalance from "./Screens/LeaveBalance";
 import LeaveRequest from "./Screens/LeaveRequest";
 import Holiday from "./Screens/Holiday";
+import Register from "./Screens/Register";
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
         <BrowserRouter>
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+
             <Route path="/home/myspace/Overview" element={<Home />} />
             <Route path="/home/myspace/Dashboard" element={<Dashboard />} />
             <Route path="/home/myspace/Calender" element={<Calender />} />
