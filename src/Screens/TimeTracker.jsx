@@ -5,6 +5,8 @@ import SideBar from '../components/SideBar'
 import DataCard from '../components/DataCard'
 import HomeNavBar2 from '../NavigationBar/HomeNavBar2'
 import TimeTrackerNavBar from '../NavigationBar/TimeTrackerNavBar'
+import { useStopwatch, useTimer } from 'react-timer-hook'
+
 
 
 const TimeTracker = () => {
@@ -20,6 +22,23 @@ const TimeTracker = () => {
         setSelectedOption2(e.target.value); // Update state when dropdown value changes
     };
 
+  
+
+
+    const {
+        totalSeconds,
+        seconds,
+        minutes,
+        hours,
+        days,
+        isRunning,
+        start,
+        pause,
+        reset,
+      } = useStopwatch({ autoStart: true });
+    
+
+  
     return (
         <>
             <SideBar />
@@ -46,9 +65,16 @@ const TimeTracker = () => {
                     <label>
                         <input className='border  text-[15px] border-slate-300 rounded-md  pl-2 pr-5 py-2' name='Work' placeholder='what are you working on?' />
                     </label>
-                    <button className={`${isCollapsed ? 'bg-green-400 text-[15px] px-6 py-2 rounded-md ml-auto' : 'bg-green-400 text-[15px] px-6 py-2 rounded-md ml-32'}`}>
-                        00:00:00
-                    </button>
+                   <div className={`${isCollapsed ? 'flex items-center justify-center ml-80' : 'flex items-center justify-center gap-2'}`}>
+                        <div className={`${isCollapsed ? 'bg-green-400 text-[15px] px-6 py-2 rounded-lg ' : 'bg-green-400 text-[15px] px-6 py-2 rounded-lg'}`}>
+                            <span>{hours.toString().padStart(2, '0')}</span>:
+                            <span>{minutes.toString().padStart(2, '0')}</span>:
+                            <span>{seconds.toString().padStart(2, '0')}</span>
+                        </div>
+                        <button onClick={start} className={`${isCollapsed ? 'bg-red-600 text-[15px] px-6 py-2 rounded-lg ml-10' : 'bg-red-600 text-[15px] px-6 py-2 rounded-lg ml-10'}`}>
+                            {isRunning ? 'Running' : 'Not running'}
+                        </button>
+                   </div>
 
                 </div>
                 <DataCard />
